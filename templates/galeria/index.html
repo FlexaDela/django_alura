@@ -28,11 +28,10 @@
         <main class="principal">
             <section class="menu-lateral">
                 <nav class="menu-lateral__navegacao">
-                    <a href="#"><img src="{% static '/assets/ícones/1x/Home - ativo.png' %}"> Home</a>
-                    <a href="#"><img src="{% static '/assets/ícones/1x/Mais vistas - inativo.png' %}"> Mais vistas</a>
-                    <a href="#"><img src="{% static '/assets/ícones/1x/Novas - inativo.png' %}"> Novas</a>
-                    <a href="#"><img src="{% static '/assets/ícones/1x/Surpreenda-me - inativo.png' %}">
-                        Surpreenda-me</a>
+                    <a href="{% url 'index' %}"><img src="{% static '/assets/ícones/1x/Home - ativo.png' %}"> Home</a>
+                    <a href=""><img src="{% static '/assets/ícones/1x/Mais vistas - inativo.png' %}">Mais vistas</a>
+                    <a href=""><img src="{% static '/assets/ícones/1x/Novas - inativo.png' %}">Novas</a>
+                    <a href=""><img src="{% static '/assets/ícones/1x/Surpreenda-me - inativo.png' %}">Surpreenda-me</a>
                 </nav>
             </section>
             <section class="conteudo">
@@ -55,7 +54,7 @@
                         <h2 class="cards__titulo">Navegue pela galeria</h2>
                         <ul class="cards__lista">
                             <li class="card">
-                                <a href="{% static '/assets/imagens/galeria/carina-nebula.png' %}">
+                                <a href="{% url 'imagem' %}">
                                     <img class="card__imagem"
                                         src="{% static '/assets/imagens/galeria/carina-nebula.png' %}" alt="foto">
                                 </a>
@@ -72,7 +71,7 @@
                                 </div>
                             </li>
                             <li class="card">
-                                <a href="{% static '/assets/imagens/galeria/carina-nebula.png' %}">
+                                <a href="{% url 'imagem' %}">
                                     <img class="card__imagem"
                                         src="{% static '/assets/imagens/galeria/carina-nebula.png' %}" alt="foto">
                                 </a>
@@ -89,7 +88,7 @@
                                 </div>
                             </li>
                             <li class="card">
-                                <a href="{% static '/assets/imagens/galeria/carina-nebula.png' %}">
+                                <a href="{% url 'imagem' %}">
                                     <img class="card__imagem"
                                         src="{% static '/assets/imagens/galeria/carina-nebula.png' %}" alt="foto">
                                 </a>
@@ -106,7 +105,7 @@
                                 </div>
                             </li>
                             <li class="card">
-                                <a href="{% static '/assets/imagens/galeria/carina-nebula.png' %}">
+                                <a href="{% url 'imagem' %}">
                                     <img class="card__imagem"
                                         src="{% static '/assets/imagens/galeria/carina-nebula.png' %}" alt="foto">
                                 </a>
@@ -123,7 +122,7 @@
                                 </div>
                             </li>
                             <li class="card">
-                                <a href="{% static '/assets/imagens/galeria/carina-nebula.png' %}">
+                                <a href="{% url 'imagem' %}}">
                                     <img class="card__imagem"
                                         src="{% static '/assets/imagens/galeria/carina-nebula.png' %}" alt="foto">
                                 </a>
@@ -140,7 +139,7 @@
                                 </div>
                             </li>
                             <li class="card">
-                                <a href="{% static '/assets/imagens/galeria/carina-nebula.png' %}">
+                                <a href="{% url 'imagem' %}">
                                     <img class="card__imagem"
                                         src="{% static '/assets/imagens/galeria/carina-nebula.png' %}" alt="foto">
                                 </a>
