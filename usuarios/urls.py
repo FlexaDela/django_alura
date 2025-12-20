@@ -1,7 +1,11 @@
 from django.urls import path, include
-
+from .views import login, cadastro, logout
+from django.conf import settings
+from django.conf.urls.static import static
 urlpatterns = [
-   #path(),
+   path('login/', login, name='login'),
+   path('cadastro/', cadastro, name='cadastro'),
+   path('logout/', logout, name='logout')
 ]
 
 if settings.DEBUG:
