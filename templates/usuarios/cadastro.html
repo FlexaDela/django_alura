@@ -20,6 +20,11 @@
     <div class="pagina-inicial">
         <header class="cabecalho">
             <img src="{% static '/assets/logo/Logo(2).png' %}" alt="Logo da Alura Space" />
+            {% for message in messages %}
+            <div class="alert alert-primary">
+                <p id="messages">{{message}}</p>
+            </div>
+            {% endfor %}
             <div class="cabecalho__busca">
                 <div class="busca__fundo">
                     <form action="{% url 'buscar' %}">
@@ -37,12 +42,12 @@
                     <a href="{% url 'index' %}"><img src="{% static '/assets/ícones/1x/Home - ativo.png' %}"> Home</a>
                     <a href="{% url 'login' %}"><img src="{% static '/assets/ícones/1x/Mais vistas - inativo.png' %}"> Login</a>
                     <a href="{% url 'cadastro' %}"><img src="{% static '/assets/ícones/1x/Novas - inativo.png' %}"> Cadastrar</a>
-                    <a href="#"><img src="{% static '/assets/ícones/1x/Surpreenda-me - inativo.png' %}"> Logout</a>
+                    <a href=""><img src="{% static '/assets/ícones/1x/Surpreenda-me - inativo.png' %}"> Logout</a>
                 </nav>
             </section>
             <section class="galeria" style="margin-left: 5em">
-                 <form action="{% url 'cadastro' %}" method="POST">
-                     {% csrf_token %}
+                <form action="{% url 'cadastro' %}" method="POST">
+                    {% csrf_token %}
                     <div class="row">
                         {% for field in form.visible_fields %}
                         <div class="col-12 col-lg-12" style="margin-bottom: 10px;">
@@ -50,9 +55,9 @@
                             {{ field }}
                         </div>
                         {% endfor %}
-                        <div>
-                            <button type="submit">Cadastrar</button>
-                        </div>
+                    </div>
+                    <div>
+                        <button type="submit" class="btn btn-success col-12" style="padding: top 5px;">Cadastrar</button>
                     </div>
                 </form>
             </section>

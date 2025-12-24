@@ -12,7 +12,20 @@ def cadastro(request):
         if form.is_valid():
             if form['senha_1'].value() != form['senha_2'].value():
                 return redirect('cadastro')
-            nome = form['']
-            form.save()
+            nome = form['nome_cadastro'].value()
+            email = form['email'].value()
+            senha = form['senha_1'].value()
+            
+            if User.objects.filter(username=nome).exists():
+                return redirect('cadastro')
 
-    return render(request, 'usuarios/cadastro.html')
+            usuario = User.objects.create_user(
+                username = nome,
+                email=email,
+                password=senha
+            )
+
+            usuario.save()
+            return redirect('login')
+
+    return render(request, 'usuarios/cadastro.html',{"form": form})

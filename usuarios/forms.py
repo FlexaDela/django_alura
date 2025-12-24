@@ -36,9 +36,8 @@ class CadastroForms(forms.Form):
             }
         )
     )
-
     email=forms.EmailField(
-        label='Nome de Cadastro',
+        label='Email',
         required=True,
         max_length=100,
         widget=forms.EmailInput(
@@ -55,20 +54,18 @@ class CadastroForms(forms.Form):
         widget=forms.PasswordInput(
             attrs={
                 'class': 'form-control',
-                'placeholder': 'Digite sua senha',
+                'placeholder': 'Digite a sua senha',
             }
         ),
     )
-
     senha_2=forms.CharField(
-        label='Senha', 
+        label='Confirme a sua senha', 
         required=True, 
         max_length=70,
         widget=forms.PasswordInput(
             attrs={
                 'class': 'form-control',
-                'placeholder': 'Digite sua senha novamente',
+                'placeholder': 'Digite a sua senha novamente',
             }
         ),
     )
-# código omitido
